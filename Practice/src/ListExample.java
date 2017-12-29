@@ -43,6 +43,8 @@ public class ListExample {
 		ls1.add("a");
 		ls1.add("b");
 		
+		//System.out.println(ls1.stream().findAll().get());
+		
 
 	}
 

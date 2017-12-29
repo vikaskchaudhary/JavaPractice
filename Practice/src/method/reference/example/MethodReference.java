@@ -30,7 +30,7 @@ public static int add(int a, int b){
 return a+b;  
 }  
 }
-public final class MethodReference {
+public final class MethodReference implements Interesting {
 	
 	public static void ThreadStatus(){  
         System.out.println("Thread is running...");  
@@ -57,18 +57,26 @@ public final class MethodReference {
         int result = adder.apply(10, 20);  
         System.out.println(result); */
 		
-		{
-		String s;
-		s= "abc";
-		String k;
-		k= new String("welcome");
-		char a[]={'a','b'};
-		String n= new String(a);
-		
-		System.out.println(s+" "+k+" "+n);
-		}
-		Sayable.newMet();
+//		{
+//		String s;
+//		s= "abc";
+//		String k;
+//		k= new String("welcome");
+//		char a[]={'a','b'};
+//		String n= new String(a);
+//		
+//		System.out.println(s+" "+k+" "+n);
+//		}
+//		Sayable.newMet();
 //		Sayable.myMet();
+		
+		//Interesting ir= MethodReference<>::check()->return 
+	}
+
+	@Override
+	public Object check(Object t, Object u) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

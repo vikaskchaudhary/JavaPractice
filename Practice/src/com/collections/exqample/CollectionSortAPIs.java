@@ -1,6 +1,7 @@
 package com.collections.exqample;
 
 import java.util.*;
+import java.util.Map.Entry;
 import java.util.concurrent.*;
 import java.util.function.BiFunction;
 
@@ -18,6 +19,7 @@ public class CollectionSortAPIs {
 		
 		List<String> ls= new ArrayList<String>();
 		HashMap<String,String> hs = new HashMap<>();
+		Map m= new LinkedHashMap<>();
 		Vector<String> vs;
 		ConcurrentHashMap<String,String> chs;
 		Hashtable<String,String> Ht;
@@ -26,18 +28,27 @@ public class CollectionSortAPIs {
 		String value = null;
 		
 		hs.put("1","ABCD");
-		hs.merge("1","EFGhij",(v1,v2)->v1.substring(2).concat(v2.substring(3)));
+		
+		Iterator it=hs.entrySet().iterator();
+		while(it.hasNext()){
+			Map.Entry pair= (Map.Entry) it.next();
+			System.out.println(pair.getKey()+" "+pair.getValue());
+		}
+		hs.merge("1","EFGhij",(a,b)->a.substring(2).concat(b.substring(3)));
 		System.out.println(hs);
 		
 		ls.add("Vikas");
 		ls.add("Basant");
 		ls.add("Shishir");
 		String lsd="a";
+		
 		lsd.hashCode();
+		Object obj;
 		
 		System.out.println("Before sort ");
 		print(ls);
 		Collections.sort(ls);
+//		Collections.
 		System.out.println("\nafter sort ");
 		print(ls);
 		//Comparator c = ;
